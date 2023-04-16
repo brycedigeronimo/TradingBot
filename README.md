@@ -7,21 +7,21 @@
 
 -Request parameters
 
--Shared parameters between the two endpoints:
- @param {string} tradingPair - the symbol used to trade, i.e. LINKUSD
- @param {int} percentOfBalance - percentage of balance to buy or sell
+-Shared parameters between the two endpoints:  
+ @param {string} tradingPair - the symbol used to trade, i.e. LINKUSD  
+ @param {int} percentOfBalance - percentage of balance to buy or sell  
  @param {string} secretKey - user generated key for an additional layer of security on top of whitelisting IP addresses for inbound webhook requests
 
 
-/buy will also require 
+/buy will also require  
 @param {int} stopLossPercentage which will be percent below the current price to set the stop loss. i.e. 5 percent stop loss.
 
-/sell will also require
+/sell will also require  
 @param {string} coin - the name of the crypto currency, i.e. LINK
 
--ENV variables required
-API_KEY=YOUR_API_KEY
-PRIVATE_KEY=YOUR_PRIVATE_KEY
+-ENV variables required  
+API_KEY=YOUR_API_KEY  
+PRIVATE_KEY=YOUR_PRIVATE_KEY  
 SECRET_KEY=YOUR_SECRET_KEY
 
 -These api endpoints can be run via webhooks from the charting platform of your choice, i.e. TradingView and allows algorithmic trading to buy and sell any crypto asset based on the trading technique
