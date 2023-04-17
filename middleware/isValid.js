@@ -13,7 +13,6 @@ const requestValidationRules = () => {
         throw new Error('Secret Key does not match');
       }
 
-      // Indicates the success of this synchronous custom validator
       return true;
     })
   ]
@@ -25,7 +24,7 @@ const validate = (req, res, next) => {
     return next()
   }
 
-  console.log(`Incorrect data parameters: ${errors}`); //console.log here instead of returning as webhook will not receive error response
+  console.log(`Incorrect data parameters: ${errors}`);
   return res.status(422);
 }
 
